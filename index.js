@@ -12,7 +12,7 @@ const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
 
 dotenv.config()
-
+mongoose.set('strictQuery', true);
 mongoose
     .connect(process.env.MONGO_URL)
     .then(() => {
