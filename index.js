@@ -10,7 +10,7 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
-mongoose.set('strictQuery', true)
+
 dotenv.config()
 
 mongoose
