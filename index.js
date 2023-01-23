@@ -33,10 +33,10 @@ app.use("/api/checkout", stripeRoute);
 const path = require("path")
 
 
-app.use(express.static(path.join(__dirname, "../fe/dist")));
+app.use(express.static(path.join(__dirname, "./client/dist")));
 app.get("*", function (req, res) {
   res.sendFile(
-    path.resolve(__dirname, "../fe/dist/index.html"),
+    path.resolve(__dirname, "./client/dist/index.html"),
     function (err) {
       res.status(500).send(err);
     }
